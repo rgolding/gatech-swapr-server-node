@@ -2,7 +2,7 @@
   "development": {
 
     "server": "swapr",
-    "database": "swapr_data",
+    "database": "testdb2",
     "username": "testadmin2",
     "password": "test",
     "dialect": "postgresql",

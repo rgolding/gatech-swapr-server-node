@@ -48,7 +48,13 @@ module.exports = function(sequelize, DataTypes) {
         createdAt: false,
 
         // I want updatedAt to actually be called updateTimestamp
-        updatedAt: false
+        updatedAt: false,
+        'classMethods': {
+            'associate': function(models) {
+                User.belongsToMany(models.Session, { 'through': models.SessionEnrollment });
+            }
+        }
+
     });
 
     return User;

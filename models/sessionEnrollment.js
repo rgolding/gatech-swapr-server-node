@@ -4,13 +4,13 @@ module.exports = function(sequelize, DataTypes) {
         {
             timestamps: false,
             createdAt: false,
-            updatedAt: false,
-            'classMethods': {
-                'associate': function(models) {
-                    SessionEnrollment.belongsTo(models.Session);
-                    SessionEnrollment.belongsTo(models.User);
-                }
-            }
+            updatedAt: false
+            // 'classMethods': {
+            //     'associate': function(models) {
+            //         SessionEnrollment.belongsTo(models.Session, {"through":});
+            //         SessionEnrollment.belongsTo(models.User);
+            //     }
+            // }
         
         });
 
