@@ -19,13 +19,17 @@ module.exports = function(sequelize, DataTypes) {
             'type': DataTypes.FLOAT,
             'allowNull': false
         }
-    }, {
+    },  {
+        timestamps: false,
+        createdAt: false,
+        updatedAt: false,
         'classMethods': {
             'associate': function(models) {
                 StudentConfidenceRating.belongsTo(models.User);
                 StudentConfidenceRating.belongsTo(models.Exercise);
             }
         }
+    
     });
 
     return StudentConfidenceRating;

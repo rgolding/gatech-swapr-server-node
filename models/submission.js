@@ -9,13 +9,17 @@ module.exports = function(sequelize, DataTypes) {
                 'notEmpty': true
             }
         }
-    }, {
+    },  {
+        timestamps: false,
+        createdAt: false,
+        updatedAt: false,
         'classMethods': {
             'associate': function(models) {
                 Submission.belongsTo(models.User);
                 Submission.belongsTo(models.Assignment);
             }
         }
+    
     });
 
     return Submission;

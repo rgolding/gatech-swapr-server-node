@@ -12,12 +12,16 @@ module.exports = function(sequelize, DataTypes) {
             'allowNull': false
         }
     }, {
+        timestamps: false,
+        createdAt: false,
+        updatedAt: false,
         'classMethods': {
             'associate': function(models) {
                 Grade.belongsTo(models.User);
                 Grade.belongsTo(models.Assignment);
             }
         }
+    
     });
 
     return Grade;

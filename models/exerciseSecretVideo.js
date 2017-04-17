@@ -12,11 +12,15 @@ module.exports = function(sequelize, DataTypes) {
             'allowNull': false
         }
     }, {
+        timestamps: false,
+        createdAt: false,
+        updatedAt: false,
         'classMethods': {
             'associate': function(models) {
                 ExerciseSecretVideo.belongsTo(models.Exercise);
             }
         }
+    
     });
 
     return ExerciseSecretVideo;

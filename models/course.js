@@ -13,12 +13,21 @@ module.exports = function(sequelize, DataTypes) {
             'unique': true,
             'validate': { 'notEmpty': true }
         }
-    }, {
+    }
+
+        // I don't want createdAt or updatedAt
+        
+    
+
+    ,{
+        timestamps: false,
+
         'classMethods': {
             'associate': function(models) {
                 Course.belongsTo(models.Institute);
             }
         }
+    
     });
 
     return Course;

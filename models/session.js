@@ -16,11 +16,16 @@ module.exports = function(sequelize, DataTypes) {
         'startDate': DataTypes.DATE,
         'endDate': DataTypes.DATE
     }, {
+        timestamps: false,
+        createdAt: false,
+        updatedAt: false,
         'classMethods': {
             'associate': function(models) {
                 Session.belongsTo(models.Course);
+
             }
         }
+    
     });
 
     return Session;

@@ -28,11 +28,15 @@ module.exports = function(sequelize, DataTypes) {
             'validate': { 'notEmpty': true }
         }
     }, {
+        timestamps: false,
+        createdAt: false,
+        updatedAt: false,
         'classMethods': {
             'associate': function(models) {
                 Exercise.belongsTo(models.Course);
             }
         }
+    
     });
 
     return Exercise;

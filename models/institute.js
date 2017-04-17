@@ -13,6 +13,12 @@ module.exports = function(sequelize, DataTypes) {
             'unique': true,
             'validate': { 'notEmpty': true }
         }
+    }, {
+        // I don't want createdAt
+        createdAt: false,
+
+        // I want updatedAt to actually be called updateTimestamp
+        updatedAt: false
     });
 
     return Institute;

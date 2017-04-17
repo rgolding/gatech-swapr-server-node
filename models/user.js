@@ -42,6 +42,13 @@ module.exports = function(sequelize, DataTypes) {
               'isEmail': true
           }
         }
+    
+    }, {
+        // I don't want createdAt
+        createdAt: false,
+
+        // I want updatedAt to actually be called updateTimestamp
+        updatedAt: false
     });
 
     return User;

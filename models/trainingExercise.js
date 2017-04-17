@@ -23,11 +23,17 @@ module.exports = function(sequelize, DataTypes) {
             'allowNull': false,
         }
     }, {
+        timestamps: false,
+        createdAt: false,
+        updatedAt: false,
         'classMethods': {
             'associate': function(models) {
                 TrainingExercise.belongsTo(models.Exercise);
             }
         }
+
+
+
     });
 
     return TrainingExercise;

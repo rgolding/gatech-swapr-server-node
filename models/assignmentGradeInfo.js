@@ -31,6 +31,9 @@ module.exports = function(sequelize, DataTypes) {
             'allowNull': false,
         }
     }, {
+        timestamps: false,
+        createdAt: false,
+        updatedAt: false,
         'classMethods': {
             'associate': function(models) {
                 AssignmentGradeInfo.belongsTo(models.User);
@@ -38,6 +41,7 @@ module.exports = function(sequelize, DataTypes) {
                 AssignmentGradeInfo.belongsTo(models.Assignment);
             }
         }
+    
     });
 
     return AssignmentGradeInfo;

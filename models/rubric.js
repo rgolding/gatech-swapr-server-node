@@ -23,11 +23,15 @@ module.exports = function(sequelize, DataTypes) {
             'allowNull': false
         }
     }, {
+        timestamps: false,
+        createdAt: false,
+        updatedAt: false,
         'classMethods': {
             'associate': function(models) {
                 Rubric.belongsTo(models.Exercise);
             }
         }
+    
     });
 
     return Rubric;

@@ -11,13 +11,19 @@ module.exports = function(sequelize, DataTypes) {
             'type': DataTypes.BOOLEAN,
             'allowNull': false
         }
-    }, {
-        'classMethods': {
+    },  {
+        timestamps: false,
+        createdAt: false,
+        updatedAt: false,
+            'classMethods': {
             'associate': function(models) {
                 UrlState.belongsTo(models.Submission);
                 UrlState.belongsTo(models.User, {'as': 'grader'});
             }
         }
+
+
+
     });
 
     return UrlState;

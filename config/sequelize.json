@@ -6,7 +6,7 @@
     "username": "testadmin2",
     "password": "test",
     "dialect": "postgresql",
-    "storage": ":memory:"
+    "storage": "uel:memory:"
   },
   "test": {
     "database": "swapr",

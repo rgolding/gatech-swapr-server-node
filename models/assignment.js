@@ -10,12 +10,14 @@ module.exports = function(sequelize, DataTypes) {
         'openDate': DataTypes.DATE,
         'closeDate': DataTypes.DATE
     }, {
+        timestamps: false,
         'classMethods': {
             'associate': function(models) {
                 Assignment.belongsTo(models.Session);
                 Assignment.belongsTo(models.Exercise);
             }
         }
+    
     });
 
     return Assignment;
