@@ -29,3 +29,15 @@ user_3, password3
 user_4, password4
 
 Hashes/salts are generated from https://www.bcrypt-generator.com. The bcrypt implementation uses only 10^8 iterations of the key derivation function (i.e., a "cost" of 08, as indicated by the $08 near the beginning of each salted hash). 10^12 is apparently best practice these days.
+
+## Setup PostgreSQL For Macs
+1. a You need to download the installer from PostgreSQL Official website. (Windows)
+1. b Install using HomeBrew: (Mac)
+  brew install postgresql
+2. postgres user and PostGres databse should be automatically created. Make a new server and database with any names, update files in sequelize.json to reflect your choice. Tables should be made automatically with grunt. 
+3. Download Postico https://eggerapps.at/postico/ for table gui. Connect to user postgres. 
+
+
+
+
+
